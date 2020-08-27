@@ -1,4 +1,4 @@
-using DevExpress.DataAccess.Excel;
+﻿using DevExpress.DataAccess.Excel;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,11 +16,13 @@ namespace WindowsApplication1
         {
             InitializeComponent();
             var source = new ExcelDataSource();
-            source.FileName = "test.xls";
+            source.FileName = "test.xlsx";//đường dẫn excle
             var worksheetSettings = new ExcelWorksheetSettings("Sheet1", "A1:B3");
             source.SourceOptions = new ExcelSourceOptions(worksheetSettings);
             source.Fill();
             gridControl1.DataSource = source;
+            //luu csdl dựa vào thằng gridcontrol
+
         }
     }
 }
